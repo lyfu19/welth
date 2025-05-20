@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# vscode - keep launch.json, ignore everything else
+.vscode/*
+!.vscode/launch.json
