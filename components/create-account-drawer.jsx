@@ -69,6 +69,20 @@ const CreateAccountDrawer = ({ children }) => {
   }, [error]);
 
   const onSubmit = async (data) => {
+    // 表单提交
+    //    ↓
+    // handleSubmit(onSubmit)
+    //    ↓
+    // onSubmit(data)
+    //    ↓
+    // createAccountFn(data)
+    //    ↓
+    // useFetch → 实际调用 createAccount(data)
+    //    ↓
+    // Prisma 写数据库 → 返回新账户
+    //    ↓
+    // setData / setError → 触发 useEffect → toast 提示
+
     await createAccountFn(data);
   };
 
