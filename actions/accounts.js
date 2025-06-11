@@ -2,7 +2,6 @@
 
 import { db } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
-import { data } from "autoprefixer";
 import { revalidatePath } from "next/cache";
 
 const serializeTransaction = (obj) => {
