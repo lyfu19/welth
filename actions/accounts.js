@@ -143,6 +143,7 @@ export const bulkDeleteTransactions = async (transactionIds) => {
     });
 
     revalidatePath("/dashboard");
+
     revalidatePath("/account/[id]");
 
     return { success: true };
