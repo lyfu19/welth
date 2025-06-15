@@ -70,7 +70,7 @@ export async function createAccount(data) {
     return { success: true, data: serializedAccount };
 
   } catch (error) {
-    throw new Error(error.message);
+    throw error;
   }
 }
 

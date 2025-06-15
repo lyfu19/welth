@@ -90,6 +90,6 @@ export async function updateBudget(amount) {
     }
   } catch (error) {
     console.error("Error updating budget:", error);
-    return { success: false, error: error.message };
+    throw error;
   }
 }

@@ -49,7 +49,7 @@ export const updateDefaultAccount = async (accountId) => {
     revalidatePath("/dashboard");
     return { success: true, data: serializeTransaction(account) };
   } catch (error) {
-    return { success: false, error: error.message };
+    throw error;
   }
 }
 
@@ -149,6 +149,6 @@ export const bulkDeleteTransactions = async (transactionIds) => {
     return { success: true };
   } catch (error) {
     console.error(error);
-    return { success: false, error: error.message };
+    throw error;
   }
 }

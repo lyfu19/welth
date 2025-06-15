@@ -28,7 +28,6 @@ const BudgetProgress = ({ initialBudget, currentExpenses }) => {
 
   const {
     data: updatedBudget,
-    error,
     fn: updateBudgetFn,
     loading: isLoading,
   } = useFetch(updateBudget);
@@ -55,12 +54,6 @@ const BudgetProgress = ({ initialBudget, currentExpenses }) => {
       toast.success("Budget updated successfully");
     }
   }, [updatedBudget]);
-
-  useEffect(() => {
-    if (error) {
-      toast.error(error.message || "Failed to update budget");
-    }
-  }, [error]);
 
   return (
     <Card>

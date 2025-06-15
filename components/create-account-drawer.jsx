@@ -49,7 +49,6 @@ const CreateAccountDrawer = ({ children }) => {
 
   const {
     data: newAccount,
-    error,
     fn: createAccountFn,
     loading: createAccountLoading,
   } = useFetch(createAccount);
@@ -61,12 +60,6 @@ const CreateAccountDrawer = ({ children }) => {
       setOpen(false);
     }
   }, [createAccountLoading, newAccount]);
-
-  useEffect(() => {
-    if (error) {
-      toast.error(error.message || "Failed to create account");
-    }
-  }, [error]);
 
   const onSubmit = async (data) => {
     // 表单提交

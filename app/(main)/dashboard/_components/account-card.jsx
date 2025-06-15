@@ -20,7 +20,6 @@ const AccountCard = ({ account }) => {
 
   const {
     data: updatedAccount,
-    error,
     fn: updateDefaultFn,
     loading: updateDefaultLoading,
   } = useFetch(updateDefaultAccount);
@@ -42,12 +41,6 @@ const AccountCard = ({ account }) => {
       toast.success("Default account updated successfully");
     }
   }, [updatedAccount, updateDefaultLoading]);
-
-  useEffect(() => {
-    if (error) {
-      toast.error(error.message || "Failed to update default account");
-    }
-  }, [error]);
 
   return (
     <Card className="group hover:shadow-md transition-shadow relative">
