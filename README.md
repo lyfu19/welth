@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welth – AI Finance Management Platform
 
-## Getting Started
+**Welth** is a full-stack AI-powered finance management platform built as part of my Master's Capstone Project. It helps users manage expenses, track budgets, and generate AI-generated reports, featuring modern web technologies like React 19, Next.js 15, Supabase, and Clerk.
 
-First, run the development server:
+## 📸 Demo Preview
+
+![Dashboard Screenshot](./public/demo-dashboard.png)  
+[Live Demo (Vercel)](https://your-deployed-url.vercel.app)
+
+## ✨ Features
+
+- 🔐 User authentication via Clerk (email & Google OAuth)
+- 📊 Income and expense tracking across multiple accounts
+- 💰 Budget management with visual progress indicators
+- 📸 AI-powered receipt scanning (auto-fill form fields)
+- 🔄 Support for recurring transactions with scheduled automation
+- 📧 Monthly financial reports and budget alert emails (via Inngest)
+- 📈 Interactive dashboards and visualizations (bar chart, pie chart)
+- 🛡️ Bot protection and rate limiting with Arcjet
+- 🌐 Fully responsive UI built with ShadCN UI + Tailwind CSS
+
+## 🙋‍♂️ My Role
+
+- Sole developer – designed, implemented, and deployed the full-stack application from scratch
+- Integrated third-party services (Clerk, Inngest, Arcjet) for auth, scheduling, and security
+- Implemented AI receipt scanning using Gemini and automated insights via scheduled jobs
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React 19, Next.js 15 (App Router)
+- **UI:** Tailwind CSS, Shadcn UI, Lucide Icons
+- **Form Handling:** React Hook Form + Zod
+- **Authentication:** Clerk
+- **Database:** Supabase (PostgreSQL) + Prisma ORM
+- **Background Jobs:** Inngest
+- **Security:** Arcjet
+- **Deployment:** Vercel
+
+## 📦 Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Generate Prisma client
+npx prisma generate
+
+# Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔐 Environment Variables
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create a `.env` file in the root directory and set the following values:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+# Clerk (Authentication)
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
+CLERK_SECRET_KEY=your_secret_key
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 
-## Learn More
+# Supabase (Database)
+DATABASE_URL=your_pooling_url
+DIRECT_URL=your_direct_url
 
-To learn more about Next.js, take a look at the following resources:
+# Arcjet (Security)
+ARCJET_KEY=your_arcjet_key
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Resend (Email service)
+RESEND_API_KEY=your_resend_api_key
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Gemini (AI Receipt Scanner)
+GEMINI_API_KEY=your_google_gemini_api_key
 
-## Deploy on Vercel
+# Inngest (Background jobs)
+INNGEST_EVENT_KEY=your_inngest_event_key
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> ⚠️ **Do NOT commit `.env` to version control.** Store secrets securely.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📌 Notes
+
+- Developed as a capstone project for my Master's in Software Engineering.
+- Designed to demonstrate real-world full-stack development skills using modern frameworks and services.
+- Includes production-ready features such as authentication, background jobs, AI integration, and performance/security enhancements.
+
+## 📄 License
+
+This project is intended for educational and portfolio use only.  
+Please refer to the licenses of the original tools and tutorials if you plan to redistribute or use commercially.
