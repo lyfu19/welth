@@ -12,4 +12,5 @@ export const { GET, POST, PUT } = serve({
     processRecurringTransaction,
     generateMonthlyReports,
   ],
+  signingKey: process.env.INNGEST_SIGNING_KEY
 });
