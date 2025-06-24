@@ -5,7 +5,7 @@
 ## 📸 Demo Preview
 
 ![Dashboard Screenshot](./public/demo-dashboard.png)  
-[Live Demo (Vercel)](https://your-deployed-url.vercel.app)
+[Live Demo (Vercel)](https://welth-theta-gray.vercel.app/)
 
 ## ✨ Features
 
