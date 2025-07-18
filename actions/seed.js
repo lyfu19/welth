@@ -3,7 +3,7 @@
 import { db } from "@/lib/prisma";
 import { subDays } from "date-fns";
 
-const ACCOUNT_ID = "9b641a83-3cf2-4ba1-aebf-155360f31e6b";
+const ACCOUNT_ID = "df4183d3-4699-4231-a93d-b689e77d1162";
 const USER_ID = "96ca575b-bfbb-4699-a607-80e8abf240fe";
 
 const CATEGORIES = {
